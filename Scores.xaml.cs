@@ -21,5 +21,16 @@ namespace Assignment5
         {
             InitializeComponent();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.Hide();
+            e.Cancel = true;
+        }
+
+        private void exit_scores_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="play_game" Content="Play Game" HorizontalAlignment="Left" Margin="94,319,0,0" VerticalAlignment="Top" Height="51" Width="135"/>
-        <Button x:Name="high_scores" Content="High Scores" HorizontalAlignment="Center" Margin="0,319,0,0" VerticalAlignment="Top" Height="51" Width="136"/>
-        <Button x:Name="user_data" Content="Enter User Data" HorizontalAlignment="Left" Margin="572,319,0,0" VerticalAlignment="Top" Height="51" Width="135"/>
+        <Button x:Name="play_game" Content="Play Game" HorizontalAlignment="Left" Margin="94,319,0,0" VerticalAlignment="Top" Height="51" Width="135" Click="play_game_Click"/>
+        <Button x:Name="high_scores" Content="High Scores" HorizontalAlignment="Center" Margin="0,319,0,0" VerticalAlignment="Top" Height="51" Width="136" Click="high_scores_Click"/>
+        <Button x:Name="user_data" Content="Enter User Data" HorizontalAlignment="Left" Margin="572,319,0,0" VerticalAlignment="Top" Height="51" Width="135" Click="user_data_Click"/>
         <Label Content="HULK MATH" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" Height="137" Margin="0,46,0,0" VerticalAlignment="Top" Width="512" FontSize="48" FontWeight="Bold"/>
 
     </Grid>

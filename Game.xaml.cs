@@ -17,9 +17,37 @@ namespace Assignment5
     /// </summary>
     public partial class Game : Window
     {
+
+        private Scores Scores;
         public Game()
         {
             InitializeComponent();
+        }
+
+        public Scores CopyHighScores
+        {
+            get { return Scores; }
+            set { Scores = value; }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.Hide();
+            e.Cancel = true;
+        }
+
+        private void end_game_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+
+        }
+
+        private void high_scores_Click(object sender, RoutedEventArgs e)
+        {
+            //Hide the game form
+            this.Hide();
+            //Show the high scores
+            Scores.ShowDialog();
         }
     }
 }

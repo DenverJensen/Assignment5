@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Game" Height="450" Width="800">
     <Grid>
-        <Button x:Name="end_game" Content="End  Game" HorizontalAlignment="Left" Margin="124,359,0,0" VerticalAlignment="Top" Height="47" Width="191"/>
-        <Button x:Name="high_scores" Content="High Scores" HorizontalAlignment="Left" Margin="504,359,0,0" VerticalAlignment="Top" Height="47" Width="149"/>
+        <Button x:Name="end_game" Content="End  Game" HorizontalAlignment="Left" Margin="124,359,0,0" VerticalAlignment="Top" Height="47" Width="191" Click="end_game_Click"/>
+        <Button x:Name="high_scores" Content="High Scores" HorizontalAlignment="Left" Margin="504,359,0,0" VerticalAlignment="Top" Height="47" Width="149" Click="high_scores_Click"/>
         <Label x:Name="game_content" Content="play game here" HorizontalAlignment="Left" Margin="337,217,0,0" VerticalAlignment="Top"/>
 
     </Grid>

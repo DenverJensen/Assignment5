@@ -8,7 +8,7 @@
         Title="User Data" Height="450" Width="800">
     <Grid>
         <Label Content="enter user data stack" HorizontalAlignment="Left" Margin="242,77,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="exit_user_data" Content="Closer User Data Form" HorizontalAlignment="Left" Margin="289,315,0,0" VerticalAlignment="Top" Height="73" Width="226"/>
+        <Button x:Name="exit_user_data" Content="Closer User Data Form" HorizontalAlignment="Left" Margin="289,315,0,0" VerticalAlignment="Top" Height="73" Width="226" Click="exit_user_data_Click"/>
 
     </Grid>
 </Window>
