@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment5"
         mc:Ignorable="d"
+        WindowStartupLocation="Manual" 
+        Left="100" Top="100"
         Title="High Scores" Height="450" Width="800">
+
     <Grid>
 
         <Label Content="High Scores:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top" Height="76" Width="577" FontSize="48" FontWeight="Bold"/>
-        <Button x:Name="exit_scores" Content="Close High Scores" HorizontalAlignment="Left" Margin="302,367,0,0" VerticalAlignment="Top" Height="39" Width="173"/>
+        <Button x:Name="exit_scores" Content="Close High Scores" HorizontalAlignment="Left" Margin="302,367,0,0" VerticalAlignment="Top" Height="39" Width="173" Click="exit_scores_Click"/>
 
     </Grid>
 </Window>

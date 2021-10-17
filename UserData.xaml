@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment5"
         mc:Ignorable="d"
+        WindowStartupLocation="Manual" 
+        Left="100" Top="100"
         Title="User Data" Height="450" Width="800">
     <Grid>
         <Label Content="enter user data stack" HorizontalAlignment="Left" Margin="242,77,0,0" VerticalAlignment="Top"/>
