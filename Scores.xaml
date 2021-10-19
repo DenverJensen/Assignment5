@@ -10,9 +10,19 @@
         Title="High Scores" Height="450" Width="800">
 
     <Grid>
-
-        <Label Content="High Scores:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top" Height="76" Width="577" FontSize="48" FontWeight="Bold"/>
-        <Button x:Name="exit_scores" Content="Close High Scores" HorizontalAlignment="Left" Margin="302,367,0,0" VerticalAlignment="Top" Height="39" Width="173" Click="exit_scores_Click"/>
+        <Image Margin="-57,-256,-56,-257" OpacityMask="#FF34FF00">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="800" UriSource="/images/hulk_high.jpg" />
+            </Image.Source>
+        </Image>
+        <Image Margin="400,-256,24,-257" OpacityMask="#FF34FF00" Height="250" Width="330">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="800" UriSource="/images/hulk_medium.jpg" />
+            </Image.Source>
+        </Image>
+        <Label x:Name="lbl_scores" Content="High Scores:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top" Height="76" Width="577" FontSize="48" FontWeight="Bold" Foreground="White" Background="#FF0FFF00"/>
+        <Button x:Name="exit_scores" Content="New Game" HorizontalAlignment="Left" Margin="302,345,0,0" VerticalAlignment="Top" Height="39" Width="173" Click="exit_scores_Click" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="37,0,0,0" Text="Results: 100%" TextWrapping="Wrap" VerticalAlignment="Center" Height="254" Width="304" Background="White"/>
 
     </Grid>
 </Window>

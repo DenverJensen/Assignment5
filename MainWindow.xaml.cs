@@ -25,10 +25,12 @@ namespace Assignment5
         /// </summary>
         Scores Scores;
 
+        User Player;
+
         /// <summary>
         /// Class that holds the user data.
         /// </summary>
-        UserData UserData;
+       // UserData UserData;
 
         /// <summary>
         /// Class where the game is played.
@@ -42,8 +44,9 @@ namespace Assignment5
             Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
 
             Scores = new Scores();
-            UserData = new UserData();
+           // UserData = new UserData();
             Game = new Game();
+            Player = new User();
 
             //Pass the high scores form to the game form.  This way the high scores form may be displayed via the game form.
             Game.CopyHighScores = Scores;
@@ -51,32 +54,81 @@ namespace Assignment5
 
         private void play_game_Click(object sender, RoutedEventArgs e)
         {
-            //Hide the menu
-            this.Hide();
-            //Show the game form
-            Game.ShowDialog();
-            //Show the main form
-            this.Show();
-        }
+            // set player name and age from input
+            bool allValid = true;
+            int intAge;
+            if (!Int32.TryParse(this.txt_age.Text, out intAge))
+            {
+           //     Player.Age = intAge;
+            }
+           // Player.name = txt_name.Text.ToString();
 
-        private void high_scores_Click(object sender, RoutedEventArgs e)
-        {
-            //Hide the menu
-            this.Hide();
-            //Show the high scores screen
-            Scores.ShowDialog();
-            //Show the main form
-            this.Show();
-        }
+            //check for validation
+            if (!Player.IsNameValid(txt_name.Text.ToString()))
+            {
+                lbl_name_error.Visibility = Visibility.Visible;
+                allValid = false;
+            }
+            else
+            {
+                lbl_name_error.Visibility = Visibility.Hidden;
+                Player.Name = txt_name.Text.ToString();
+            }
 
-        private void user_data_Click(object sender, RoutedEventArgs e)
-        {
-            //Hide the menu
-            this.Hide();
-            //Show the user data form
-            UserData.ShowDialog();
-            //Show the main form
-            this.Show();
+            if (!Player.IsAgeValid(intAge))
+            {
+                lbl_age_error.Visibility = Visibility.Visible;
+                allValid = false;
+            }
+            else
+            {
+                Player.Age = Int32.Parse(txt_age.Text.ToString());
+                lbl_age_error.Visibility = Visibility.Hidden;
+            }
+
+            if (radio_division.IsChecked == false && radio_multiplication.IsChecked == false && radio_subtraction.IsChecked == false && radio_add.IsChecked == false)
+            {
+                lbl_select_error.Visibility = Visibility.Visible;
+                allValid = false;
+            }
+            else
+            {
+                lbl_select_error.Visibility = Visibility.Hidden;
+            }
+            if(allValid)
+            {
+
+                //set math game operator based on selection
+                MathGame.Operation op = new MathGame.Operation();
+                if(radio_division.IsChecked == true)
+                {
+                    op = MathGame.Operation.divide;
+                }
+
+                if (radio_add.IsChecked == true)
+                {
+                    op = MathGame.Operation.add;
+                }
+
+                if (radio_multiplication.IsChecked == true)
+                {
+                    op = MathGame.Operation.multiply;
+                }
+
+                if (radio_subtraction.IsChecked == true)
+                {
+                    op = MathGame.Operation.subtract;
+                }
+                //valid input. set values to player object
+
+                //Hide the menu
+                this.Hide();
+                //Show the game form
+                Game.LoadUserInfo(Player.Name, Player.Age, op);
+                Game.ShowDialog();
+                //Show the main form
+                this.Show();
+            }
         }
     }
 }

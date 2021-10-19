@@ -6,4 +6,28 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="images\bkg.jpg" />
+    <None Remove="images\bruce_banner.jpg" />
+    <None Remove="images\hulk1.png" />
+    <None Remove="images\hulk2.png" />
+    <None Remove="images\hulk_confused.jpg" />
+    <None Remove="images\hulk_high.jpg" />
+    <None Remove="images\hulk_math_bkg.jpeg" />
+    <None Remove="images\hulk_medium.jpg" />
+    <None Remove="images\hulk_split.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\bkg.jpg" />
+    <Resource Include="images\bruce_banner.jpg" />
+    <Resource Include="images\hulk1.png" />
+    <Resource Include="images\hulk2.png" />
+    <Resource Include="images\hulk_confused.jpg" />
+    <Resource Include="images\hulk_high.jpg" />
+    <Resource Include="images\hulk_math_bkg.jpeg" />
+    <Resource Include="images\hulk_medium.jpg" />
+    <Resource Include="images\hulk_split.jpg" />
+  </ItemGroup>
+
 </Project>

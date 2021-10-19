@@ -8,10 +8,30 @@
         WindowStartupLocation="Manual" 
         Left="100" Top="100"
         Title="Game" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="end_game" Content="End  Game" HorizontalAlignment="Left" Margin="124,359,0,0" VerticalAlignment="Top" Height="47" Width="191" Click="end_game_Click"/>
-        <Button x:Name="high_scores" Content="High Scores" HorizontalAlignment="Left" Margin="504,359,0,0" VerticalAlignment="Top" Height="47" Width="149" Click="high_scores_Click"/>
-        <Label x:Name="game_content" Content="play game here" HorizontalAlignment="Left" Margin="337,217,0,0" VerticalAlignment="Top"/>
+    <Grid Height="430">
+
+        <Image Margin="-44,0,-45,-98" OpacityMask="#FF34FF00">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="800" UriSource="/images/hulk_confused.jpg" />
+            </Image.Source>
+        </Image>
+
+        <Button x:Name="end_game" Content="Cancel Game" HorizontalAlignment="Center" Margin="0,342,0,0" VerticalAlignment="Top" Height="63" Width="176" Click="end_game_Click" FontSize="20"/>
+        <StackPanel x:Name="stk_questions" HorizontalAlignment="Left" VerticalAlignment="Top" Width="434" Height="100" Background="#FF18FF00" Orientation="Horizontal" Margin="271,211,0,0" Visibility="Hidden">
+            <Label x:Name="lbl_question" Content="1 + 1 = ___" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0" FontSize="22"/>
+            <TextBox x:Name="txt_answer" TextWrapping="Wrap" Width="75" Margin="30,30,0,30" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button x:Name="btn_submit" IsDefault="True" Content="Submit" Margin="50,30,0,30" Width="120" FontSize="20" Click="lbl_submit_Click"/>
+        </StackPanel>
+        <Label x:Name="txt_user_info" Content="User Info" FontSize="24" Foreground="#FF22FF00" Margin="47,24,472,332"/>
+        <Label x:Name="lbl_timer" Content="0" HorizontalAlignment="Left" Margin="534,324,0,0" VerticalAlignment="Top" Height="84" Width="98" Background="#FF2BFF00" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Visibility="Hidden"/>
+        <Button x:Name="btn_start" Content="Start" HorizontalAlignment="Left" Margin="482,22,0,0" VerticalAlignment="Top" Height="77" Width="202" FontSize="30" FontWeight="Normal" Click="btn_start_Click"/>
+        <StackPanel x:Name="stk_game_info" Width="162" HorizontalAlignment="Left" Margin="42,213,0,119" Background="#FF18FF00" Visibility="Hidden">
+            <Label x:Name="lbl_question_num" Content="Question #1:" FontSize="16"/>
+            <Label x:Name="lbl_correct" Content="Correct Answers: " FontSize="16"/>
+            <Label x:Name="lbl_incorrect" Content="Incorrect Answers:" FontSize="16"/>
+        </StackPanel>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="246,123,0,0" VerticalAlignment="Top" Height="62" Width="282"/>
+        <Label x:Name="lbl_result" Content="Correct!!!" HorizontalAlignment="Left" Margin="204,123,0,0" VerticalAlignment="Top" Height="62" Width="379" Foreground="Black" Background="#FF18FF00" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" Visibility="Hidden"/>
 
     </Grid>
 </Window>
