@@ -50,11 +50,7 @@ namespace Assignment5
 
         private void end_game_Click(object sender, RoutedEventArgs e)
         {
-            stk_questions.Visibility = Visibility.Hidden;
-            lbl_timer.Visibility = Visibility.Hidden;
-            btn_start.Visibility = Visibility.Visible;
-            lbl_result.Visibility = Visibility.Hidden;
-            stk_game_info.Visibility = Visibility.Hidden;
+            ResetForm();
             times = 0;
             this.Hide();
         }
@@ -133,11 +129,8 @@ namespace Assignment5
             }
             if (session.isOver)
             {
-                stk_questions.Visibility = Visibility.Hidden;
-                lbl_timer.Visibility = Visibility.Hidden;
-                btn_start.Visibility = Visibility.Visible;
-                lbl_result.Visibility = Visibility.Hidden;
-                stk_game_info.Visibility = Visibility.Hidden;
+                ResetForm();
+                
                 times = 0;
                 session.isOver = false;
                 this.Hide();
@@ -148,6 +141,15 @@ namespace Assignment5
             {
                 lbl_question.Content = session.GenerateQuestion();
             }
+        }
+
+        private void ResetForm()
+        {
+            stk_questions.Visibility = Visibility.Hidden;
+            lbl_timer.Visibility = Visibility.Hidden;
+            btn_start.Visibility = Visibility.Visible;
+            lbl_result.Visibility = Visibility.Hidden;
+            stk_game_info.Visibility = Visibility.Hidden;
         }
 
         private void UpdateResults()

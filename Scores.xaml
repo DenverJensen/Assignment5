@@ -22,7 +22,7 @@
         </Image>
         <Label x:Name="lbl_scores" Content="High Scores:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top" Height="76" Width="577" FontSize="48" FontWeight="Bold" Foreground="White" Background="#FF0FFF00"/>
         <Button x:Name="exit_scores" Content="New Game" HorizontalAlignment="Left" Margin="302,345,0,0" VerticalAlignment="Top" Height="39" Width="173" Click="exit_scores_Click" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Margin="37,0,0,0" Text="Results: 100%" TextWrapping="Wrap" VerticalAlignment="Center" Height="254" Width="304" Background="White"/>
+        <Label x:Name="lbl_results" Content="Name: results:" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Center" Height="247" Width="359" Foreground="Black" Background="#FF06FF00" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
 
     </Grid>
 </Window>

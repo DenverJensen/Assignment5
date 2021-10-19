@@ -34,7 +34,7 @@
         <Label x:Name="lbl_user_error" Content="You must enter user info" HorizontalAlignment="Left" Margin="374,233,0,0" VerticalAlignment="Top" FontSize="16" Foreground="Red" Background="White" Visibility="Hidden"/>
         <StackPanel Width="400" Margin="381,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Label x:Name="lbl_name" Content="Name" HorizontalAlignment="Center" Margin="0,0,0,15" FontSize="18" Background="#FF4FFF00"/>
-            <TextBox x:Name="txt_name" TextWrapping="Wrap" Width="273" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF10A912"/>
+            <TextBox x:Name="txt_name" TextWrapping="Wrap" Width="273" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF10A912"/>
             <Label x:Name="lbl_name_error" Content="You must enter a name" Foreground="Red" FontSize="16" HorizontalAlignment="Center" Background="#FF62FF00" Visibility="Hidden"/>
             <Label x:Name="lbl_age" Content="Age:" Margin="0,0,0,15" HorizontalAlignment="Center" FontSize="18" Background="#FF34FF00"/>
             <TextBox x:Name="txt_age" TextWrapping="Wrap" Width="273" Height="35" FontSize="18" Foreground="#FF0BB90D" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
