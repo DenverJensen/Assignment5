@@ -13,9 +13,12 @@
     <None Remove="images\hulk2.png" />
     <None Remove="images\hulk_confused.jpg" />
     <None Remove="images\hulk_high.jpg" />
+    <None Remove="images\hulk_high2.jfif" />
     <None Remove="images\hulk_math_bkg.jpeg" />
     <None Remove="images\hulk_medium.jpg" />
     <None Remove="images\hulk_split.jpg" />
+    <None Remove="sounds\buz.wav" />
+    <None Remove="sounds\smash_wav.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,9 +28,12 @@
     <Resource Include="images\hulk2.png" />
     <Resource Include="images\hulk_confused.jpg" />
     <Resource Include="images\hulk_high.jpg" />
+    <Resource Include="images\hulk_high2.jfif" />
     <Resource Include="images\hulk_math_bkg.jpeg" />
     <Resource Include="images\hulk_medium.jpg" />
     <Resource Include="images\hulk_split.jpg" />
+    <Resource Include="sounds\buz.wav" />
+    <Resource Include="sounds\smash_wav.wav" />
   </ItemGroup>
 
 </Project>

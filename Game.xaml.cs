@@ -11,8 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Threading;
-
-
+using System.Media;
 
 namespace Assignment5
 {
@@ -66,6 +65,7 @@ namespace Assignment5
         public void LoadUserInfo(string name, int age, MathGame.Operation op)
         {
             string userinfo = String.Concat(name, "  (", age.ToString(), ")");
+            Scores.Player = String.Concat(name, "  (", age.ToString(), ")");
             txt_user_info.Content = userinfo;
             session.eOperation = op;
         }
@@ -130,10 +130,15 @@ namespace Assignment5
             if (session.isOver)
             {
                 ResetForm();
-                
+                session.end_time = times;
+
                 times = 0;
                 session.isOver = false;
                 this.Hide();
+                Scores.Correct = session.correct;
+                Scores.Wrong = session.wrong;
+                Scores.End_time = session.end_time;
+                Scores.LoadResults();
                 //Show the high scores
                 Scores.ShowDialog();
             }
@@ -157,10 +162,14 @@ namespace Assignment5
             if (session.isCorrect)
             {
                 lbl_result.Content = "Correct!!!";
+                SoundPlayer simpleSound = new SoundPlayer("sounds/smash_wav.wav");
+                simpleSound.Play();
             }
             else
             {
                 lbl_result.Content = "Wrong!  " + "(" + session.answer.ToString() + ")";
+                SoundPlayer simpleSound = new SoundPlayer("sounds/buz.wav");
+                simpleSound.Play();
             }
             stk_game_info.Visibility = Visibility.Visible;
             lbl_correct.Content = "Correct Answers: " + session.correct.ToString();

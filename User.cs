@@ -26,17 +26,8 @@ namespace Assignment5
             {
                 return false;
             }
-            foreach (char item in name)
-            {
-                if (!char.IsLetter(item))
-                {
-                    return false;
-                }
-            }
-
             return true;
-
-        }
+            }
 
         public bool IsAgeValid(int age)
         {

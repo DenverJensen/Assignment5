@@ -8,26 +8,27 @@ namespace Assignment5
     {
 
 
-        public int correct = 0;
+        public int correct { get; set; } = 0;
 
-        public int wrong = 0;
+        public int wrong { get; set; } = 0;
 
-        public int num1;
+        public int num1 { get; set; }
 
-        public int num2;
+        public int num2 { get; set; }
 
-        public int answer;
+        public int answer { get; set; }
 
-        public int guess;
+        public int guess { get; set; }
 
-        public int question_num = 1;
+        public int question_num { get; set; } = 1;
+
+        public bool isCorrect { get; set; }
+
+        public int end_time { get; set; }
+
+        public bool isOver { get; set; } = false;
 
         public Random random;
-
-        public bool isCorrect;
-
-        public bool isOver = false;
-
 
         public Operation eOperation { get; set; }
         /// <summary>
@@ -178,7 +179,7 @@ namespace Assignment5
             grade();
         }
 
-        public void grade()
+        private void grade()
         {
             if (guess == answer)
             {
